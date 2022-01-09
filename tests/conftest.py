@@ -21,15 +21,15 @@ def test_db(resource_setup):
         print('name {0} has id {1}'.format(k, resource_setup[k]))
 
 
-def test_red(resource_setup):
+def test_name1(resource_setup):
     assert resource_setup["name1"] == 1
 
 
-def test_blue(resource_setup):
+def test_name2(resource_setup):
     assert resource_setup["name2"] != 1
 
 
-def test_green(resource_setup):
+def test_name3(resource_setup):
     assert resource_setup["name3"] == 3
 
 
