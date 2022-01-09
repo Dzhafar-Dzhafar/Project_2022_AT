@@ -5,9 +5,9 @@ import time
 @pytest.fixture(scope="module")
 def resource_setup(request):
     print("\nconnect to DB")
-    db: dict[str, int] = {'Red': 1,
-                          "Blue": 2,
-                          "Green": 3}
+    db: dict[str, int] = {'name1': 1,
+                          "name2": 2,
+                          "name3": 3}
 
     def resource_teardown():
         print("\ndisconnect")
@@ -18,15 +18,19 @@ def resource_setup(request):
 
 def test_db(resource_setup):
     for k in resource_setup.keys():
-        print('color {0} has id {1}'.format(k, resource_setup[k]))
+        print('name {0} has id {1}'.format(k, resource_setup[k]))
 
 
 def test_red(resource_setup):
-    assert resource_setup["Red"] == 1
+    assert resource_setup["name1"] == 1
 
 
 def test_blue(resource_setup):
-    assert resource_setup["Blue"] != 1
+    assert resource_setup["name2"] != 1
+
+
+def test_green(resource_setup):
+    assert resource_setup["name3"] == 3
 
 
 @pytest.fixture(autouse=True, scope='session')
