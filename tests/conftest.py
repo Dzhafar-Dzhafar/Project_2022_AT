@@ -28,7 +28,7 @@ def test_blue(resource_setup):
 
 @pytest.fixture(autouse=True, scope='session')
 def footer_session_scope():
-    """Сообщает время в конце session(сеанса)."""
+    """Сообщает время в конце сеанса"""
     yield
     now = time.time()
     print('--')
@@ -37,7 +37,7 @@ def footer_session_scope():
 
 @pytest.fixture(autouse=True)
 def footer_function_scope():
-    """Сообщает продолжительность теста после каждой функции."""
+    """Сообщает продолжительность теста после каждой функции"""
     start = time.time()
     yield
     stop = time.time()
