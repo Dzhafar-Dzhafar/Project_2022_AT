@@ -67,3 +67,4 @@ def test_2() -> None:
 def show_affiliation():
     yield
     print("\nProperty of Golovin Nikita Andreevich")
+    return 1
