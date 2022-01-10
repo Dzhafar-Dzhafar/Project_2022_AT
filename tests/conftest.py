@@ -1,7 +1,7 @@
 import pytest
-import time
+#import time
 
-
+'''
 @pytest.fixture(scope="module")
 def resource_setup(request):
     print("\nconnect to DB")
@@ -59,3 +59,10 @@ def test_1() -> None:
 
 def test_2() -> None:
     time.sleep(4.23)
+'''
+
+
+@pytest.fixture(scope='function')
+def show_affiliation():
+    print("\n Property of Golovin Nikita Andreevich")
+    return 1
