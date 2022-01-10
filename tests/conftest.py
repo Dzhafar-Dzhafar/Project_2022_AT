@@ -64,7 +64,5 @@ def test_2() -> None:
 
 @pytest.fixture(scope='function')
 def show_affiliation():
-    print("\nProperty of Golovin Nikita Andreevich")
     yield
     print("\nProperty of Golovin Nikita Andreevich")
-    return 1
