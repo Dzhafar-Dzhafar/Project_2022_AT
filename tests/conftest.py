@@ -1,4 +1,5 @@
 import pytest
+
 '''import time
 '''
 '''
@@ -12,7 +13,7 @@ def resource_setup(request):
     def resource_teardown():
         print("\ndisconnect")
 
-    request.addfinalizer(resource_teardown)
+    request.add finalizer(resource_teardown)
     return db
 
 
