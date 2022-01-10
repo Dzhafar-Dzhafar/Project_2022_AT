@@ -1,6 +1,6 @@
 import pytest
-#import time
-
+'''import time
+'''
 '''
 @pytest.fixture(scope="module")
 def resource_setup(request):
@@ -64,5 +64,7 @@ def test_2() -> None:
 
 @pytest.fixture(scope='function')
 def show_affiliation():
-    print("\n Property of Golovin Nikita Andreevich")
+    print("\nProperty of Golovin Nikita Andreevich")
+    yield
+    print("\nProperty of Golovin Nikita Andreevich")
     return 1
